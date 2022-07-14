@@ -4,15 +4,27 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	let numero1;
-	let numero2;
-	let resultado;
+var numeroUno;
+var numeroDos;
+var porcentaje;
+var mensaje;
 
-	numero1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numero2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 
-	resultado = numero1 + numero2
-	
-	alert("La suma es " + resultado);
+numeroUno = document.getElementById("txtIdNumeroUno").value;
+numeroDos = document.getElementById("txtIdNumeroDos").value;
+
+numeroUno = parseFloat(numeroUno);
+numeroDos = parseFloat(numeroDos);
+
+porcentaje = (numeroDos - numeroUno) / numeroUno * 100;
+
+
+
+mensaje = "El porcentaje de diferencia es " + porcentaje + "%";
+alert(mensaje);
+
+
+
+
 }
 
