@@ -2,6 +2,7 @@ function mostrar() {
     var primerNum;
     var segundoNum;
     var suma;
+    var mensaje;
 
 
 
@@ -12,7 +13,7 @@ function mostrar() {
     if (primerNum == segundoNum) 
     {
         
-        alert(primerNum + segundoNum);
+        mensaje = (primerNum + segundoNum);
     }
     else 
     {
@@ -22,19 +23,19 @@ function mostrar() {
             primerNum = parseInt(primerNum);
             segundoNum = parseInt(segundoNum);
             
-            alert(primerNum - segundoNum);
+            mensaje = (primerNum - segundoNum);
         }
         else 
         {
             suma = primerNum + segundoNum;
-            alert(suma);
+            mensaje = (suma);
         }
 
     }
 
-    if ((suma) > 10) 
+    if (suma > 10) 
     {
-        alert("La suma es " + suma + " y supero el 10.");
+        mensaje = ("La suma es " + suma + " y supero el 10.");
     }
-
+    alert(mensaje);
 }

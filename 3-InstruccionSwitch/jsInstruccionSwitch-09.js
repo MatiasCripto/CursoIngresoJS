@@ -1,4 +1,4 @@
-function mostrar()
+function mostrar()/*
 {
 	var destino;
 	var estacion;
@@ -14,8 +14,7 @@ function mostrar()
 	
 	destino = document.getElementById("txtIdDestino").value;
 	estacion = document.getElementById("txtIdEstacion").value;
-
-	switch(estacion){
+/*switch(estacion){
 		case "Invierno":
 			if(destino == "Bariloche"){
 				aumento = 20; 
@@ -59,4 +58,91 @@ function mostrar()
 
 
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN*/
+
+
+
+{
+	var destino;
+	var estacion;
+	var tarifaBase;
+	var precioFinal;
+	var aumento;
+	var descuento;
+	
+	aumento = 0;
+	descuento = 0;
+
+	tarifaBase = 15000
+	
+	destino = document.getElementById("txtIdDestino").value;
+	estacion = document.getElementById("txtIdEstacion").value;
+
+	switch(estacion)
+	{
+		case "Invierno":
+			switch(destino)
+			{
+				case "Bariloche":
+					aumento = 20;
+					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+				break;	
+				case "Cataratas":
+				case "Cordoba":
+					descuento = 10;
+					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
+				break;
+				case "Mar del plata":
+					descuento = 20;
+					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
+				break;	
+			}
+	}		
+	switch(estacion)
+	{		
+		case "Verano":
+			switch(destino)
+			{
+				case "Bariloche":
+					descuento = 20;
+					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
+				break;
+				case "Cataratas":	
+				case "Cordoba":
+					aumento = 10;
+					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+				break;	
+				case "Mar del plata":
+					aumento = 20;
+					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+				break;
+			}
+			
+	}
+	switch(estacion)
+	{			
+		case "Otoño":
+		case "Primavera":
+			switch(destino)
+			{
+				case "Bariloche":
+				case "Cataratas":
+				case "Mar del plata":		
+					aumento = 10;
+					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+				break;
+				case "Cordoba":
+					precioFinal = tarifaBase;
+				break;	
+			}		
+			
+		}	
+		
+		 
+	
+	alert(precioFinal);
+	
+
+
+
+}

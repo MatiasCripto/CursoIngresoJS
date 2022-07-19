@@ -2,26 +2,44 @@ function mostrar()
 {
 	//tomo el mes
 	var mes;
+	var mensaje;
 
 	mes = document.getElementById("txtIdMes").value;
 
-	switch(mes){
-			case "Enero":
-				alert("Que comiences bien el año!!!.");
-				break;
-			case "Marzo":
-				alert("a clases!!!.");
-				break;
-			case "Julio":
-				alert("Se vienen las vacaciones!!!.");
-				break;
-			case "Diciembre":
-				alert("Felices fiestas!!!.");		
-
+	if (mes == "Enero")
+	{
+		mensaje = ("Que comiences bien el año");
 	}
+	else
+	{
+		if ( mes == "Marzo")
+		{
+			mensaje = ("A clases");
+		}
+		else 
+		{
+			if (mes == "Julio")
+			{
+				mensaje = ("Se vienen las vacaciones");
+			}
+			else
+			{
+				if (mes == "Diciembre")
+				{
+					mensaje = "Felices fiestas"
+				}
+				else
+				{
+					mensaje = ("No hay mensaje para mostrar");
+				}
+			}
+		}
+	}
+			alert(mensaje);
+}
 
 	
 
 
 
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN

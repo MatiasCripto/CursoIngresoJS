@@ -2,6 +2,7 @@ function mostrar()
 {
 	//tomo la hora
 	var hora;
+	var mensaje;
 
 	hora = document.getElementById("txtIdHora").value;
 
@@ -13,8 +14,8 @@ function mostrar()
 		case 9:	
 		case 10:
 		case 11:
-			alert("Es de mañana");
-			break;
+			mensaje = ("Es de mañana");
+		break;
 		case 12:
 		case 13:
 		case 14:
@@ -23,8 +24,8 @@ function mostrar()
 		case 17:
 		case 18:
 		case 19:
-			alert("Es de tarde");
-			break;
+			mensaje = ("Es de tarde");
+		break;
 		case 0:
 		case 1:
 		case 2:
@@ -37,11 +38,12 @@ function mostrar()
 		case 22:
 		case 23:
 		case 24:
-			alert("Es de noche");
-			break;
+			mensaje = ("Es de noche");
+		break;
 		default:
-			alert("La hora no existe");
+			mensaje = ("La hora no existe");
 
 	}
+	alert(mensaje);
 
 }//FIN DE LA FUNCIÓN

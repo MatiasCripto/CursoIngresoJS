@@ -2,6 +2,7 @@ function mostrar()
 {
 	//tomo la hora
 	var hora;
+	var mensaje;
 
 	hora = document.getElementById("txtIdHora").value;
 
@@ -13,9 +14,15 @@ function mostrar()
 		case 9:
 		case 10:
 		case 11:
-			alert("Es de mañana");
-			break;				
+			mensaje = ("Es de mañana");
+		break;				
+		default:
+		{
+			mensaje = ("No se ingreso una hora de mañana");
+		}
 	}
+	
+	alert(mensaje);
 	
 
 
