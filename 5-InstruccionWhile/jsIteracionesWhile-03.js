@@ -6,11 +6,12 @@ function mostrar()
 	var mensaje;
 	
 	claveIngresada = prompt("ingrese el número clave.");
-
-	while(claveIngresada == "utn750")
+	
+	while(claveIngresada != "utn750")
 	{
-		mensaje = ("Es correcta");
+		claveIngresada = prompt("ingrese el número clave.");
 	}
+	mensaje = ("Es correcta");
 	alert(mensaje);
 	
 }//FIN DE LA FUNCIÓN

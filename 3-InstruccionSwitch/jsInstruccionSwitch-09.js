@@ -67,12 +67,8 @@ function mostrar()/*
 	var estacion;
 	var tarifaBase;
 	var precioFinal;
-	var aumento;
-	var descuento;
+	var mensaje;
 	
-	aumento = 0;
-	descuento = 0;
-
 	tarifaBase = 15000
 	
 	destino = document.getElementById("txtIdDestino").value;
@@ -84,19 +80,17 @@ function mostrar()/*
 			switch(destino)
 			{
 				case "Bariloche":
-					aumento = 20;
-					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+					porcentaje = 20;
 				break;	
 				case "Cataratas":
 				case "Cordoba":
-					descuento = 10;
-					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
-				break;
+					porcentaje = - 10;
+						break;
 				case "Mar del plata":
-					descuento = 20;
-					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
+					porcentaje = - 20;
 				break;	
 			}
+		break;
 	}		
 	switch(estacion)
 	{		
@@ -104,20 +98,17 @@ function mostrar()/*
 			switch(destino)
 			{
 				case "Bariloche":
-					descuento = 20;
-					precioFinal = tarifaBase - (tarifaBase *  descuento / 100);
+					porcentaje = - 20;
 				break;
 				case "Cataratas":	
 				case "Cordoba":
-					aumento = 10;
-					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+					porcentaje = 10;
 				break;	
 				case "Mar del plata":
-					aumento = 20;
-					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+					porcentaje = 20;
 				break;
 			}
-			
+		break;	
 	}
 	switch(estacion)
 	{			
@@ -128,19 +119,18 @@ function mostrar()/*
 				case "Bariloche":
 				case "Cataratas":
 				case "Mar del plata":		
-					aumento = 10;
-					precioFinal = tarifaBase + (tarifaBase *  aumento / 100);
+					porcentaje = 10;
 				break;
 				case "Cordoba":
-					precioFinal = tarifaBase;
+					porcentaje = 0;
 				break;	
 			}		
-			
-		}	
-		
-		 
+		break;	
+	}	
+		precioFinal = tarifaBase + (tarifaBase * porcentaje / 100);
+		mensaje = "La estadia tiene el valor de $ " + precioFinal;
 	
-	alert(precioFinal);
+	alert(mensaje);
 	
 
 
