@@ -6,11 +6,11 @@ function mostrar()
 {
 	let saludo;
 
-	saludo = "Esto funciona de maravilla"
+	saludo = "Soy Kiara"
 	alert(saludo);
 }
-
 */
+
 /*{
   var diametroMayor;
   var diametroMenor;
@@ -959,7 +959,7 @@ E) informar el porcentaje de cartas de cada tipo de rareza (ejemplo 25% de carta
 25% rarisimas 25% legendarias)
 
 */
-{
+/*{
   var nombre;
   var edad;
   var cantAsientos;
@@ -1062,7 +1062,7 @@ E) informar el porcentaje de cartas de cada tipo de rareza (ejemplo 25% de carta
   mensajeD = " el precio final " + precioFinal;
   alert(mensajeA + mensajeB + mensajeC + mensajeD);
   
-}
+}*/
 /*Ejercicio 3
 
 UTN airlines nos pide desarrollar una app para registrar el ingreso de pasajeros a distintos vuelos, 
@@ -1567,3 +1567,984 @@ c) El promedio de personas que usan la clase Ejecutiva.
     c) cantidad de goles realizado en nuestra primer victoria y el nombre del equipo rival
     d) promedio de victorias como local y promedio de derrotas como visitante.
     e) nombre y cantidad de goles del equipo que nos hizo más goles.*/
+
+/*{
+  var nombre;
+  var edad;
+  var peso;
+  var altura;
+  var i;
+  var banderaMasJoven;
+  var jugadorMasJoven;
+  var nombreJugadoMasJoven;
+  var banderaMAsALto;
+  var pesoMasALto;
+  var masAlto;
+  var contadorAltura;
+  var acumuladorAltura;
+  var promedioAltura;
+  var acumuladorPeso;
+  var contadorPeso;
+  var promedioPeso;
+  var contadorJugadoresG;
+
+  contadorJugadoresG = 0;
+  acumuladorPeso = 0;
+  contadorPeso = 0;
+  acumuladorAltura = 0;
+  contadorAltura = 0;
+  banderaMasJoven = 0;
+  banderaMAsALto = 0;
+
+  for(i=0;i<11;i++)
+  {
+    nombre=prompt("Ingrese su nombre");
+    edad = prompt("Ingrese la edad");
+    edad=parseInt(edad);
+    while(isNaN(edad)==true || edad <0)
+    {
+      edad = prompt("Ingrese la edad");
+      edad=parseInt(edad);
+    }
+    peso=prompt("Ingrese el peso mayor a 0");
+    peso=parseFloat(peso);
+    while(isNaN(peso)==true || peso <0)
+    {
+      peso=prompt("Ingrese el peso mayor a 0");
+      peso=parseFloat(peso);
+    }
+    altura=prompt("Ingrese la altura en cm mayor a 0");
+    altura=parseFloat(altura);
+    while(isNaN(altura)== true || altura<0)
+    {
+      altura=prompt("Ingrese la altura en cm mayor a 0");
+      altura=parseFloat(altura);
+    }
+    if(banderaMasJoven == 0)
+    {
+      nombreJugadoMasJoven = nombre;
+      jugadorMasJoven = edad;
+      banderaMasJoven = 1;
+    }
+    else
+    {
+      if(edad < jugadorMasJoven)
+      {
+        nombreJugadoMasJoven = nombre;
+        jugadorMasJoven = edad;
+      }
+    }
+    if(banderaMAsALto)
+    {
+      pesoMasALto = peso;
+      masAlto = altura;   
+      banderaMAsALto = 1;   
+    }
+    else
+    {
+      if(altura > masAlto)
+      {
+        pesoMasALto = peso;
+        masAlto = altura;   
+      }
+    }
+    if(altura > 1.7 && peso >85)
+    {
+      contadorJugadoresG++
+
+    }
+    contadorAltura++;
+    acumuladorAltura = acumuladorAltura + altura;
+    contadorPeso++;
+    acumuladorPeso = acumuladorPeso + peso;
+  }
+  promedioPeso = acumuladorPeso / contadorPeso;
+  promedioAltura = acumuladorAltura / contadorAltura;
+
+} */
+/*
+Ejercicio 1
+
+Se pide cargar la ficha médica para 11 jugadores de fútbol.
+Se solicita Nombre, Edad, Peso(ej: 60.5kg) y Altura(ej: 1.65mt).
+A) Nombre del jugador más joven.
+B) El peso del jugador más alto.
+C) Promedio de altura del equipo.
+D) Promedio de peso del equipo.
+E) Cantidad de jugadores que superen 1.7 mt y pesen mas de 85 kg.
+
+*/   
+
+/*{
+  var nombre;
+  var edad;
+  var cantidadVistas;
+  var tipoSuscriptor;
+  var respuesta;
+  var nombreSuscMasViejo;
+  var suscMasViejo;
+  var banderaSuscMasViejo;
+  var acumuladorVistas;
+  var contadorVistas;
+  var promedioVistas;
+  var mensajeA;
+  var mensajeB;
+  var mensajeC;
+  var mensajeFinal;
+
+  contadorVistas = 0;
+  acumuladorVistas = 0;
+  banderaSuscMasViejo = 0;
+  respuesta = true;
+
+  while(respuesta == true)
+  {
+    nombre = prompt("Ingrrese el nombre");
+    edad = prompt("Ingrese la edad mayor a 10");
+    edad=parseInt(edad);
+    while(isNaN(edad)==true || edad <11) 
+    {
+      edad = prompt("Ingrese la edad mayor a 10");
+      edad=parseInt(edad);
+    }
+    cantidadVistas=prompt("ingrese la cantidadd mayor a 0");
+    cantidadVistas=parseInt(cantidadVistas);
+    while(isNaN(cantidadVistas)==true || cantidadVistas<0)
+    {
+      cantidadVistas=prompt("ingrese la cantidadd mayor a 0");
+      cantidadVistas=parseInt(cantidadVistas);
+    }
+    tipoSuscriptor=prompt("Ingrese el tipo: follow o suscriptor");
+    while(tipoSuscriptor != "follow" && tipoSuscriptor != "suscriptor")
+    {
+      tipoSuscriptor=prompt("Ingrese el tipo: follow o suscriptor");
+    }
+    if(tipoSuscriptor == "suscriptor")
+    {
+      if(banderaSuscMasViejo == 0)
+      nombreSuscMasViejo = nombre;
+      suscMasViejo = edad;
+      banderaSuscMasViejo = 1;
+    }
+    else
+    {
+      if(edad > suscMasViejo)
+      {
+        nombreSuscMasViejo = nombre;
+        suscMasViejo = edad;
+      }
+    }
+
+    contadorVistas++;
+    acumuladorVistas = acumuladorVistas + cantidadVistas;
+
+    respuesta = confirm("Desea ingresar mas datos?");
+
+  }
+  promedioVistas = acumuladorVistas / contadorVistas;
+  mensajeA = "El nombre del suscriptor mas viejo es " + nombreSuscMasViejo;
+  mensajeB = " la canatidad de viwers es " + acumuladorVistas;
+  mensajeC = " el promedio de vistas es " + promedioVistas;
+  mensajeFinal = mensajeA + mensajeB + mensajeC;
+  alert(mensajeFinal);
+}*/
+/*{
+  var i;
+  var tipo;
+  var cantidad;
+  var marca;
+  var precio;
+  var acumuladorProductos;
+  var contadorProductos;
+  var promedioStock;
+  var banderaPelotaMasCara;
+  var marcaPelotaMasCara;
+  var pelotaMasCara;
+  var acumuladorCamiseta;
+  var acumuladorPantalon;
+  var acumuladorPelota;
+  var tipoMasCargas;
+  var mensajeA;
+  var mensajeB;
+  var mensajeC;
+  var mensajeFinal;
+
+  acumuladorPelota = 0;
+  acumuladorPantalon = 0;
+  acumuladorCamiseta = 0;
+  banderaPelotaMasCara = 0;
+  acumuladorProductos = 0;
+  contadorProductos = 0;
+
+  for(i=0;i<2;i++)
+  {
+    tipo = prompt("ingrese pantalon, camiseta o pelotas");
+    while(tipo != "pantalon" && tipo != "camiseta" && tipo != "pelota")
+    {
+      tipo = prompt("ingrese pantalon, camiseta o pelotas");
+    }
+    cantidad = prompt("Ingrese la cantidad de stock");
+    cantidad = parseInt(cantidad);
+    while(isNaN(cantidad)==true || cantidad <0)
+    {
+      cantidad = prompt("Ingrese la cantidad de stock");
+      cantidad = parseInt(cantidad);
+    }
+    marca = prompt("Ingrese lotto, fila o lacoste");
+    while(marca != "lotto" && marca != "fila" && marca != "lacoste")
+    {
+      marca = prompt("Ingrese lotto, fila o lacoste");
+    }
+    precio = prompt("Ingrese un precio entre 900 y 25000");
+    precio = parseInt(precio);
+    while(isNaN(precio)==true || precio <900 || precio >25000)
+    {
+      precio = prompt("Ingrese un precio entre 900 y 25000");
+      precio = parseInt(precio);
+    }
+    if(banderaPelotaMasCara == 0)
+    {
+      if(tipo == "pelota")
+      {
+        pelotaMasCara = precio;
+        marcaPelotaMasCara = marca;
+        banderaPelotaMasCara = 1;
+      }
+      else
+      {
+        if(precio > pelotaMasCara)
+        {
+          pelotaMasCara = precio;
+          marcaPelotaMasCara = marca;
+        }
+      }
+
+    }
+    switch(tipo)
+    {
+      case "camiseta":
+        acumuladorCamiseta = acumuladorCamiseta + precio;
+      break;
+      case "pantalon":
+        acumuladorPantalon = acumuladorPantalon + precio;
+      break;  
+      case "pelota":
+        acumuladorPelota = acumuladorPelota + precio;
+      break;   
+    }
+    contadorProductos++;
+    acumuladorProductos = acumuladorProductos + cantidad;
+
+
+  }
+  if(acumuladorCamiseta > acumuladorPantalon && acumuladorCamiseta > acumuladorPelota)
+  {
+    tipoMasCargas = "camiseta"
+  }
+  else
+  {
+    if(acumuladorPantalon > acumuladorPelota)
+    {
+      tipoMasCargas = "pantalon"
+    }
+    else
+    {
+      tipoMasCargas = "pelota"
+    }
+  }
+  promedioStock = acumuladorProductos / contadorProductos;
+
+  mensajeA = " el promedio de stock es " + promedioStock;
+  mensajeB = " la marca de la pelota mas cara es " + marcaPelotaMasCara;
+  mensajeC = " el tipo con mas cargas es " + tipoMasCargas;
+  mensajeFinal = mensajeA + mensajeB + mensajeC;
+  alert(mensajeFinal);
+}*/
+/*{
+  var nombre;
+  var empresa;
+  var destino;
+  var horas;
+  var respuesta;
+  var contadrPlus;
+  var contadorFlecha;
+  var contadorPlus;
+  var contadorCheva;
+  var empresaMasViajo;
+  var banderaChofer;
+  var nombreChofer;
+  var menosHoras;
+  var acumuladorHoras;
+  var mensajeA;
+  var mensajeB;
+  var mensajeC;
+  var mensajeFinal;
+
+  acumuladorHoras = 0;
+  banderaChofer = 0;
+  contadorCheva = 0;
+  contadorPlus = 0;
+  contadorFlecha = 0;
+  contadrPlus = 0;
+  respuesta = true;
+
+  while(respuesta == true)
+  {
+    nombre = prompt("Ingrese el nombre");
+    empresa = prompt("Ingrese la emprewsa: plusmar, flechabus o chevalier");
+    while(empresa != "flecahbus" && empresa != "plusmar" && empresa != "chevalier")
+    {
+      empresa = prompt("Ingrese la emprewsa: plusmar, flechabus o chevalier");
+    }
+    destino = prompt("Ingrese el destino: jujuy, cordoba o chubut");
+    while(destino != "cordoba" && destino != "jujuy" && destino != "chubut")
+    {
+      destino = prompt("Ingrese el destino: jujuy, cordoba o chubut");
+    }
+    horas = prompt("Ingrese la cantidad de horas mayor a 0");
+    horas = parseInt(horas);
+    while(isNaN(horas)==true || horas < 0)
+    {
+      horas = prompt("Ingrese la cantidad de horas mayor a 0");
+      horas = parseInt(horas);
+    }
+    switch(empresa)
+    {
+      case "chevalier":
+        contadorCheva++;
+      break;
+      case "flecahbus":
+        contadorFlecha++;
+      break;
+      case "plusmar":
+        contadorPlus++;
+      break;      
+    }
+    if(banderaChofer == 0)
+    {
+      menosHoras = horas;
+      nombreChofer = nombre;
+      banderaChofer = 1;
+    }
+    else
+    {
+      if(horas < menosHoras)
+      {
+        menosHoras = horas;
+        nombreChofer = nombre;
+      }
+    }
+
+    acumuladorHoras = acumuladorHoras + horas;
+    respuesta = confirm("Desea ingresar mas datos?");
+  }
+
+  
+  if(contadorCheva > contadorFlecha && contadorCheva > contadorPlus)
+  {
+    empresaMasViajo = "chevalier";
+  }
+  else
+  {
+    if(contadorFlecha > contadorPlus)
+    {
+      empresaMasViajo = "flechabus"
+    }
+    else
+    {
+      empresaMasViajo = "plusmar";
+    }
+  }
+  mensajeA = "la empresa mas elegida es " + empresaMasViajo;
+  mensajeB = " El nombre del chofer que menos hras viajo es " +nombreChofer;
+  mensajeC = " la cantidad total de horas es " + acumuladorHoras;
+  mensajeFinal = mensajeA + mensajeB + mensajeC;
+  alert(mensajeFinal);
+
+}*/
+
+/*{
+  var nombre;
+  var genero;
+  var tipoDeventa;
+  var importe;
+  var i;
+  var discosMasBarato;
+  var importeDiscoMasBarato;
+  var banderaDiscoMasBarato;
+  var banderaVentaMasCara;
+  var ventaMasCara;
+  var nombreVentaMasCara;
+  var contadorTotal;
+  var acumuladorTotal;
+  var promedioTotal;
+  var contadorVentasMemoria;
+  var mensajeA;
+  var mensajeB;
+  var mensajeC;
+  var mensajeD;
+  var mensajeFinal;
+
+  contadorVentasMemoria = 0;
+  contadorTotal = 0;
+  acumuladorTotal = 0;
+  banderaVentaMasCara = 0;
+  banderaDiscoMasBarato = 0;
+
+  for(i=0;i<2;i++)
+  {
+    nombre=prompt("Ingrese el nombre del producto");
+    genero = prompt("Ingrese el genero: memorias, discos, motherboards");
+    while(genero != "memorias" && genero != "discos" && genero != "motherboards")
+    {
+      genero = prompt("Ingrese el genero: memorias, discos, motherboards");
+    }
+    tipoDeventa = prompt("ingrese online o local");
+    while(tipoDeventa != "online" && tipoDeventa != "local")
+    {
+      tipoDeventa = prompt("ingrese online o local");
+    }
+    importe=prompt("Ingrese el importe entre 0 y 30000");
+    importe=parseInt(importe);
+    while(isNaN(importe)==true || importe< 0 || importe > 30000)
+    {
+      importe=prompt("Ingrese el importe entre 0 y 30000");
+      importe=parseInt(importe);
+    }
+    if(genero == "discos")
+    {
+
+      if(banderaDiscoMasBarato == 0)
+      {
+        discosMasBarato = nombre;
+        importeDiscoMasBarato = importe;
+        banderaDiscoMasBarato = 1;
+      }
+    else
+    {
+      if(importe < importeDiscoMasBarato)
+      {
+        discosMasBarato = nombre;
+        importeDiscoMasBarato = importe;
+      }
+    }
+    }
+
+    if(banderaVentaMasCara == 0)
+    {
+      ventaMasCara = importe;
+      nombreVentaMasCara = nombre;
+      banderaVentaMasCara = 1;
+    }
+    else
+    {
+      if(importe > ventaMasCara)
+      {
+        ventaMasCara = importe;
+        nombreVentaMasCara = nombre;
+      }
+    }
+    if(genero == "memoria" && importe < 850)
+    {
+      contadorVentasMemoria++;
+    }
+    contadorTotal++;
+    acumuladorTotal = acumuladorTotal + importe;
+
+  }
+  promedioTotal = acumuladorTotal / contadorTotal;
+  mensajeA = " El mas baratos de los discos cuesta " + importeDiscoMasBarato + " y su nombre es " + discosMasBarato;  
+  mensajeB = " el nombre del producto d ela venta mas cara es " + nombreVentaMasCara;
+  mensajeC = " el importe promedio total es " + promedioTotal;
+  mensajeD = " la cantidad de memorias que valen menos que $850 son " + contadorVentasMemoria;
+  mensajeFinal = mensajeA + mensajeB + mensajeC + mensajeD;
+  alert(mensajeFinal);
+}
+/*Una casa de computación que se especializa en venta de insumos importados
+ desea calcular ciertas métricas en base a las ventas de sus productos.
+  Se ingresa de cada venta: (Ingresa mínimo 5 ventas)
+-Nombre del producto.
+-Género: (Memorias – Discos – Motherboards)
+-Tipo de Venta: (Online – Local)
+-Importe: (No pueden ser números negativos ni mayor a los 30000)
+Se pide:
+A- El más barato de “Discos” con su importe .
+B- De la venta más cara, el nombre del producto.
+C- El importe promedio del total.
+D- La cantidad de ventas que sean de “Memorias” y cuesten menos de $850.*/
+
+/*{
+  var nombre;
+  var edad;
+  var tipoVehiculo;
+  var preferencia;
+  var precio;
+  var cantidad;
+  var i;
+  var banderaCompraMasGrande;
+  var compraMasGrande;
+  var edadCompraMasGrande;
+  var nombreCompraMasGrande;
+  var porcentaje;
+  var banderaMinima;
+  var cantidadMinima;
+  var contadorAuto;
+  var contadorCamioneta;
+  var contadorPickup;
+  var contadorNafta;
+  var contadorDiesel;
+  var contador;
+  var banderaMasViejo;
+  var nombreMasViejo;
+  var masViejo;
+  var porcentajeAuto;
+  var porcentajePickup;
+  var porcentajeCamioneta;
+  
+  banderaMasViejo = 0;
+  contador = 0;
+  contadorDiesel = 0;
+  contadorNafta = 0;
+  contadorAuto = 0;
+  contadorCamioneta = 0;
+  contadorPickup = 0;
+  banderaMinima = 0;
+  banderaCompraMasGrande = 0;
+
+  for(i=0;i<10;i++)
+  {
+    nombre = prompt("Ingrese el nombre");
+    edad = prompt("Ingrese la edad mayor a 18");
+    edad = parseInt(edad);
+    while(isNaN(edad) == true || edad < 18)
+    {
+      edad = prompt("Ingrese la edad mayor a 18");
+      edad = parseInt(edad);
+    }
+    tipoVehiculo = prompt("Ingrese el tipo: auto, camioneta o pickup");
+    while(tipoVehiculo != "auto" && tipoVehiculo != "camioneta" && tipoVehiculo != "pickup")
+    {
+      tipoVehiculo = prompt("Ingrese el tipo: auto, camioneta o pickup");
+    }
+    preferencia = prompt("Ingrese la preferencia: nafta o diesel");
+    while(preferencia != "nafta" && preferencia != "diesel")
+    {
+      preferencia = prompt("Ingrese la preferencia: nafta o diesel");
+    } 
+    precio = prompt("Ingrese el precio mayor que 0");
+    precio = parseInt(precio);
+    while(isNaN(precio)==true || precio < 0)
+    {
+      precio = prompt("Ingrese el precio mayor que 0");
+      precio = parseInt(precio);
+    }
+    cantidad = prompt("Ingrese una cantidad mayor a 0");
+    cantidad = parseInt(cantidad);
+    while(isNaN(cantidad)==true || cantidad <0)
+    {
+      cantidad = prompt("Ingrese una cantidad mayor a 0");
+      cantidad = parseInt(cantidad);
+    }
+
+    if(banderaCompraMasGrande == 0)
+    {
+      compraMasGrande = precio;
+      nombreCompraMasGrande = nombre;
+      edadCompraMasGrande = edad;
+      banderaCompraMasGrande = 1;
+    }
+    else
+    {
+      if(precio > compraMasGrande)
+      {
+        compraMasGrande = precio;
+        nombreCompraMasGrande = nombre;
+        edadCompraMasGrande = edad;
+        porcentaje = 0.90;
+      }
+
+    }
+    if(banderaMinima == 0)
+    {
+      cantidadMinima = cantidad;
+      banderaMinima = 1;
+    }
+    else
+    {
+      if(cantidad < cantidadMinima)
+      {
+        cantidadMinima = cantidad;
+      }
+    }
+    switch(tipoVehiculo)
+    {
+      case "auto":
+        contadorAuto++
+      break;
+      case "camioneta":
+        contadorCamioneta++; 
+        if(preferencia == "nafta")
+        {
+          contadorNafta++;
+        } 
+      break;
+      case "pickup":
+        contadorPickup++;
+        if(preferencia == "diesel")
+        {
+          contadorDiesel++;
+        }
+        if(banderaMasViejo == 0)
+        {
+          masViejo = edad;
+          nombreMasViejo = nombre;
+          banderaMasViejo = 1;
+        }
+        else
+        {
+          if(edad > masViejo)
+          {
+            masViejo = edad;
+            nombreMasViejo = nombre;
+          }
+        }
+      break;    
+    }
+    contador++
+
+  }
+  porcentajeAuto = contadorAuto * 100 / contador;
+  porcentajeCamioneta = contadorCamioneta * 100 / contador;
+  porcentajePickup = contadorPickup * 100 / contador;
+  document.write("la compra mas grande realizada es " + (compraMasGrande * porcentaje) + " el clientes es " + nombreCompraMasGrande + " y su edad es " + edadCompraMasGrande);
+	document.write("<br>");
+	document.write("la minima cantidad de vehiculos vendidos es " + cantidadMinima);
+	document.write("<br>");
+	document.write(" se compraron " + contadorNafta + " camionestas a nafta");
+	document.write("<br>");
+  document.write(" el cliente mas viejo que compro una pickup es " + nombreMasViejo);
+	document.write("<br>");
+  document.write(" el porcentaje de autos es " + porcentajeAuto + " el de camionetas es " + porcentajeCamioneta +  " y el de pickup es " + porcentajePickup);
+}*/
+/*Una concesionaria necesita realizar un sistema de ventas online, donde se calculará 
+las preferencias de 10 clientes. Los datos necesarios son:
+-Nombre del cliente: (no puede contener números)
+-Edad: (validar que sea mayor a 18 años)
+-Tipo de vehículo: (Auto - Camioneta - PickUp)
+-Preferencia: (Nafta – Diesel)
+-Precio por vehículo.
+-Cantidad de vehículos.
+Calcular y mostrar en un document.write: A- A la compra más grande realizada, 
+se le otorgará un 10% de descuento, mostrando el nombre del cliente y su edad.
+B- La mínima cantidad de vehículos vendidos.
+C- Cuántas Camionetas a Nafta se compraron.
+D- El cliente más viejo que compró una PickUp Diesel.
+E- El porcentaje de clientes que compraron Auto, Camioneta y PickUp.*/
+/*{
+  var codigo;
+  var producto;
+  var totalVenta;
+  var respuesta;
+  var porcentaje;
+  var contadorBarniz;
+  var contadorEnduido;
+  var contadorPintura;
+  var productoMasVendido;
+  var banderaMasRecaudado;
+  var vendedorMasRecaudo;
+  var masRecaudado;
+  var contadorVentas;
+  var acumuladorVentas;
+
+  contadorVentas = 0;
+  acumuladorVentas = 0;
+  banderaMasRecaudado = 0;
+  contadorBarniz = 0;
+  contadorEnduido = 0;
+  contadorPintura = 0;
+  respuesta = true;
+
+  while(respuesta == true)
+  {  codigo = prompt("Ingrese el codigo del vendedor: v100, v102 o v103");
+    while(codigo!= "v100" && codigo != "v102" && codigo != "v103")
+    {
+      codigo = prompt("Ingrese el codigo del vendedor: v100, v102 o v103");
+    }
+    producto = prompt("Ingrese le producto: pintura, barniz o enduido");
+    while(producto != "pintura" && producto != "barniz" && producto != "enduido")
+    {
+      producto = prompt("Ingrese le producto: pintura, barniz o enduido");
+    }
+    totalVenta=prompt("Ingrese el total de la venta mayor a 0");
+    totalVenta = parseInt(totalVenta);
+    while(isNaN(totalVenta)==true || totalVenta < 0)
+    {
+      totalVenta=prompt("Ingrese el total de la venta mayor a 0");
+      totalVenta = parseInt(totalVenta);
+    }
+    if(totalVenta > 7000)
+    {
+      porcentaje = 0.80;
+    }
+    else
+    {
+      porcentaje = 0.90;
+    }
+    switch(producto)
+    {
+      case "barniz":
+        contadorBarniz++;
+      break;
+      case "enduido":
+        contadorEnduido++;
+      break;
+      case "pintura":
+        contadorPintura++;
+      break;      
+      
+    }
+    if(contadorBarniz > contadorEnduido && contadorBarniz > contadorPintura)
+    {
+      productoMasVendido = "barniz";
+    }
+    else
+    {
+      if(contadorEnduido > contadorPintura)
+      {
+        productoMasVendido = "enduido";
+      }
+      else
+      {
+        productoMasVendido = "pintura";
+      }
+    }
+    if(banderaMasRecaudado == 0)
+    {
+      masRecaudado = totalVenta;
+      vendedorMasRecaudo = codigo;
+      banderaMasRecaudado = 1;
+    }
+    else
+    {
+      if(totalVenta > masRecaudado)
+      {
+        
+        masRecaudado = totalVenta;
+        vendedorMasRecaudo = codigo;
+      }
+    }
+    contadorVentas++;
+    acumuladorVentas = acumuladorVentas + totalVenta;
+
+
+    respuesta = confirm("Desea ingresar mas datos?");
+  }
+  mensajeA = " el producto mas comprado es " + productoMasVendido;
+  mensajeB = " el codigo del vendedor que mas recaudo es "  + vendedorMasRecaudo + " el dinero recaudado es " + acumuladorVentas + " y la cantidad de ventas es " + contadorVentas;
+  mensajeFinal = mensajeA + mensajeB;
+  alert(mensajeFinal);
+}*/
+/*Una pinturería necesita un programa que permita la carga de productos vendidos, 
+junto a los datos del vendedor. Se requiere ingresar los siguientes campos:
+-Código del vendedor (v100 -v102 -v103)
+-Producto elegido: (Pintura, Barniz, Enduido)
+-Total de la venta.
+No hay un límite total de ventas.
+Una vez finalizada la carga de productos se debe calcular la comisión del vendedor.
+-Si el vendedor superó la cantidad de ventas de $7000 le corresponde una comisión del %20. Sino del %10.
+Se debe mostrar:
+*El producto más comprado.
+*El código del vendedor con más dinero recaudado y la cantidad de ventas realizadas.
+ (Mostrando el código, la cantidad de dinero recaudada y la cantidad total de ventas).*/
+
+ {
+   var nombre;
+   var tipoProducto;
+   var cantidad;
+   var cafe;
+   var medialuna;
+   var churros;
+   var respuesta;
+   var acumuladorMedialunas;
+   var contadorCafe;
+   var contadorChurros;
+   var contadorMedialuna;
+   var productoMasVendido;
+   var banderaMayorCompras;
+   var mayorCantidad;
+   var nombreMayorCantidad;
+   var ptoductoMAyorCantidad;
+   var totalCompra;
+   var productoMenosVendido;
+   var mensajeA;
+   var mensajeB;
+   var mensajeC;
+   var mensajeD;
+   var mensajeFinal;
+
+   banderaMayorCompras = 0;
+   contadorCafe = 0;
+   contadorChurros = 0;
+   contadorMedialuna = 0;
+   acumuladorMedialunas = 0;
+   cafe = 100;
+   medialuna = 60;
+   churros = 50;   
+   respuesta = true;
+
+   while(respuesta == true)
+   {
+    nombre = prompt("Ingrese el nombre");
+    tipoProducto = prompt("Ingrese el producto: cafe, medialuna o churro");
+    while(tipoProducto != "cafe" && tipoProducto != "medialuna" && tipoProducto != "churros")
+    {
+      tipoProducto = prompt("Ingrese el producto: cafe, medialuna o churro");
+    }
+    cantidad = prompt("Ingrese la cantidad mayor a 0");
+    cantidad = parseInt(cantidad);
+    while(isNaN(cantidad) || (cantidad <0))
+    {
+      cantidad = prompt("Ingrese la cantidad mayor a 0");
+      cantidad = parseInt(cantidad);
+    }
+    if(cantidad == 24)
+    {
+      if(tipoProducto == "medialuna" || tipoProducto == "churros")
+      {
+        porcentaje = 0.7
+      }
+    }
+    else
+    {
+      if(cantidad == 12)
+      {
+        porcentaje = 0.8
+      }
+      else 
+      {
+        if(cantidad == 10)
+        {
+          porcentaje = 0.9
+        }
+      }
+    }
+    switch(tipoProducto)
+    {
+      case "cafe":
+        if(cantidad == 1)
+        {
+          porcentaje = 0.95;
+        }
+        contadorCafe++;
+      break;
+      case "churros":
+        if(cantidad == 5)
+        {
+          porcentaje = 0.95;
+        }  
+        contadorChurros++;
+      break;  
+      case "medialuna":  
+        if(cantidad == 5)
+        {
+          porcentaje = 0.95;
+        }  
+        contadorMedialuna++;
+      break;   
+          
+    }
+
+    if(banderaMayorCompras ==0)
+    {
+      mayorCantidad = cantidad;
+      nombreMayorCantidad = nombre;
+      ptoductoMAyorCantidad = tipoProducto;
+      banderaMayorCompras = 1;
+    }
+    else
+    {
+      if(cantidad > mayorCantidad)
+      {
+        mayorCantidad = cantidad;
+        nombreMayorCantidad = nombre;
+        ptoductoMAyorCantidad = tipoProducto;
+      }
+    }
+    totalCompra = (cafe * cantidad) + (medialuna * cantidad) + (churros * cantidad);
+    acumuladorMedialunas = acumuladorMedialunas + cantidad;
+
+    respuesta = confirm("Desea ingresar mas datos?")
+  }
+
+  if(contadorCafe > contadorChurros && contadorCafe > contadorMedialuna)
+  {
+  productoMasVendido = "cafe";
+  }
+  else
+  {
+    if(contadorChurros > contadorMedialuna)
+    {
+      productoMasVendido = "churros";
+    }
+    else
+    {
+      productoMasVendido = "medialuna"
+    }
+  }
+
+  if(totalCompra > 1300)
+  {
+    porcentaje = 1.20
+  }
+  if(contadorCafe < contadorChurros && contadorCafe < contadorMedialuna)
+  {
+    productoMenosVendido = "cafe";
+  }
+  else
+  {
+    if(contadorChurros < contadorMedialuna)
+    {
+      productoMenosVendido = "churros";
+    }
+    else
+    {
+      productoMenosVendido = "medialuna";
+    }
+  }
+  mensajeA = " \n se compraron " + acumuladorMedialunas + " medialunas";
+  mensajeB = " \n el producto mas vendido fue " + productoMasVendido;
+  mensajeC = " \n el nombre del cliente con mayor cantidad de compras fue " + nombreMayorCantidad + " y el producto mas comprado fue " + productoMasVendido;
+  mensajeD = " \n el producto menos vendido fue " + productoMenosVendido;
+  mensajeFinal = mensajeA + mensajeB + mensajeC + mensajeD;
+  alert(mensajeFinal);
+
+   
+}
+ /**
+Ejercicio 3
+
+Parador Atalaya
+
+Para la nueva sucursal de Atalaya a la vuelta de UTN Avellaneda, es necesario llevar un registro 
+de la venta diaria de cafés, medialunas y churros, esto durante las siguientes 12 horas.
+Para eso, al momento de cada venta, se debe ingresar:
+Nombre del cliente a retirar
+Tipo (Café / Medialunas /Churros) 
+Cantidad.
+El precio por unidad de cada producto es:
+Café $100.
+Medialunas $60.
+Churros $50.
+Si compra 2 docenas de Medialunas o Churros tendrá un 30% de descuento.
+Si compra 1 docena Medialunas o Churros tendrá un 20% de descuento.
+Si compra 10 Medialunas o Churros tendrá un 10% de descuento.
+Si compra 5 Medialunas o Churros y un café tendrá un 5% de descuento.
+Informes:
+a) Cuantas Medialunas se compraron durante toda la jornada.
+b) Cuál fue el producto con más unidades vendidas.
+c) Nombre del cliente, y tipo de producto con mayor cantidad de compras
+d) En caso de haber excedido el monto de $1300 sumarle un 20% de impuestos.
+e) Informar cuál fue el producto menos vendido para poder sacarlo de la venta.
+***/
+
+
